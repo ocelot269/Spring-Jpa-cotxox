@@ -129,17 +129,17 @@ public class CotxoxApplicationTests {
         Assert.assertTrue(conductorRepo instanceof Repository);
     }
 
-//    /**
-//     * Implementa el servei de l'entitat conductor i el seu repositori
-//     * per a recuperar un conductor per la seva targeta de crèdit.
-//     */
-//
-//    @Test
-//    public void test_recuperar_conductor() {
-//        Conductor conductor = conductorService.recuperarConductor("1111111111111111");
-//        Assert.assertNotNull(conductor);
-//        Assert.assertEquals("Samantha", conductor.getNombre());
-//    }
+    /**
+     * Implementa el servei de l'entitat conductor i el seu repositori
+     * per a recuperar un conductor per la seva targeta de crèdit.
+     */
+
+    @Test
+    public void test_recuperar_conductor() {
+        Conductor conductor = conductorService.recuperarConductor("1111111111111111");
+        Assert.assertNotNull(conductor);
+        Assert.assertEquals("Samantha", conductor.getNombre());
+    }
 //
 //    /**
 //     * Completa el codi del cas test test_save_conductor()
