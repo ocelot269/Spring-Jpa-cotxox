@@ -140,31 +140,31 @@ public class CotxoxApplicationTests {
         Assert.assertNotNull(conductor);
         Assert.assertEquals("Samantha", conductor.getNombre());
     }
-//
-//    /**
-//     * Completa el codi del cas test test_save_conductor()
-//     * per a afegir les conductores següents a la BBDD
-//     * mitjançant el servei de l'entitat conductor:
-//     *
-//     * String[] nombres = {"Sabrina", "Cici"};
-//     * String[] matricula = {"5DHJ444", "7JKK555"};
-//     * String[] modelos = {"Toyota Prius", "Mercedes A"};
-//     */
-//
-//    @Test
-//    public void test_save_conductor() {
-//
-//        /**
-//         * Escriu aqui el codi per a crear les conductores
-//         * i escriure-les a la base de dades
-//         */
-//        conductorService.crearConductor("2222222222222222","Sabrina", "5DHJ444","Toyota Prius");
-//        conductorService.crearConductor("3333333333333333","Cici", "7JKK555","Mercedes A");
-//
-//        Assert.assertEquals("Sabrina", conductorService.recuperarConductor("2222222222222222").getNombre());
-//        Assert.assertEquals("Cici", conductorService.recuperarConductor("3333333333333333").getNombre());
-//
-//    }
+
+    /**
+     * Completa el codi del cas test test_save_conductor()
+     * per a afegir les conductores següents a la BBDD
+     * mitjançant el servei de l'entitat conductor:
+     *
+     * String[] nombres = {"Sabrina", "Cici"};
+     * String[] matricula = {"5DHJ444", "7JKK555"};
+     * String[] modelos = {"Toyota Prius", "Mercedes A"};
+     */
+
+    @Test
+    public void test_save_conductor() {
+
+        /**
+         * Escriu aqui el codi per a crear les conductores
+         * i escriure-les a la base de dades
+         */
+        conductorService.crearConductor("2222222222222222","Sabrina", "5DHJ444","Toyota Prius");
+        conductorService.crearConductor("3333333333333333","Cici", "7JKK555","Mercedes A");
+
+        Assert.assertEquals("Sabrina", conductorService.recuperarConductor("2222222222222222").getNombre());
+        Assert.assertEquals("Cici", conductorService.recuperarConductor("3333333333333333").getNombre());
+
+    }
 //
 //    /**
 //     * Modifica l'atribut ocupat de l'entitat Conductor i la lògica
