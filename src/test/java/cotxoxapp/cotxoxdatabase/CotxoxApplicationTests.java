@@ -207,22 +207,22 @@ public class CotxoxApplicationTests {
      * que retorni una llista de conductores lliures
      */
 
-//    @Test
-//    public void test_recuperar_conductor_libre_repositori() {
-//
-//        // només n'hi ha una conductora, Samantha, a la BBDD
-//
-//        List<Conductor> conductoresLibres = conductorRepo.findByOcupado(0);
-//        Assert.assertNotNull(conductoresLibres);
-//        Assert.assertEquals("Samantha", conductoresLibres.get(0).getNombre());
-//        Assert.assertEquals(false, conductoresLibres.get(0).isOcupado());
-//
-////		 introduïm més conductores a la BBDD
-//        conductorService.init();
-//        conductoresLibres = conductorRepo.findByOcupado(0);
-//        Assert.assertEquals(3, conductoresLibres.size());
-//        Assert.assertEquals(false, conductoresLibres.get(1).isOcupado());
-//    }
+    @Test
+    public void test_recuperar_conductor_libre_repositori() {
+
+        // només n'hi ha una conductora, Samantha, a la BBDD
+
+        List<Conductor> conductoresLibres = conductorRepo.findByOcupado(0);
+        Assert.assertNotNull(conductoresLibres);
+        Assert.assertEquals("Samantha", conductoresLibres.get(0).getNombre());
+        Assert.assertEquals(false, conductoresLibres.get(0).isOcupado());
+
+//		 introduïm més conductores a la BBDD
+        conductorService.init();
+        conductoresLibres = conductorRepo.findByOcupado(0);
+        Assert.assertEquals(3, conductoresLibres.size());
+        Assert.assertEquals(false, conductoresLibres.get(1).isOcupado());
+    }
 
     /**
      * Implementa un mètode en el servei de l'entitat Conductor
