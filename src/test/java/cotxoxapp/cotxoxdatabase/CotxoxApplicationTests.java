@@ -165,21 +165,21 @@ public class CotxoxApplicationTests {
         Assert.assertEquals("Cici", conductorService.recuperarConductor("3333333333333333").getNombre());
 
     }
-//
-//    /**
-//     * Modifica l'atribut ocupat de l'entitat Conductor i la lògica
-//     * del mètodes setOcupado() i isOcupado()
-//     * per a adaptar-lo al TINYINT de MySQL
-//     */
-//
-//    @Test
-//    public void test_BooleanOcupado_adaptado_a_SQL() {
-//        Conductor conductora = conductorService.recuperarConductor("1111111111111111");
-//        Assert.assertEquals("Samantha", conductora.getNombre());
-//        Assert.assertEquals(false, conductora.isOcupado());
-//        conductora.setOcupado(true);
-//        Assert.assertEquals(true, conductora.isOcupado());
-//    }
+
+    /**
+     * Modifica l'atribut ocupat de l'entitat Conductor i la lògica
+     * del mètodes setOcupado() i isOcupado()
+     * per a adaptar-lo al TINYINT de MySQL
+     */
+
+    @Test
+    public void test_BooleanOcupado_adaptado_a_SQL() {
+        Conductor conductora = conductorService.recuperarConductor("1111111111111111");
+        Assert.assertEquals("Samantha", conductora.getNombre());
+        Assert.assertEquals(false, conductora.isOcupado());
+        conductora.setOcupado(true);
+        Assert.assertEquals(true, conductora.isOcupado());
+    }
 //
 //    /**
 //     * Modifica el servei de l'entitat conductor amb un mètode init() per a inserir
