@@ -106,17 +106,17 @@ public class CotxoxApplicationTests {
         Assert.assertNotNull(carreraService);
     }
 
-//    /**
-//     * Utilitza els mètodes del repositori de carrera
-//     * i del servei carrera per a fer persistent una carrera
-//     */
-//
-//    @Test
-//    public void test_save_carrera() {
-//        Long idCarrera = carreraService.crearCarrera("1234567890123456", "Parc de Ses Estacions", "Festival Park", 15, 18);
-//        // seria necessari afegir el conductor però anem a testear primer repo
-//        Assert.assertEquals("1234567890123456", carreraService.recuperaCarrera(idCarrera).getTarjetaCredito());
-//    }
+    /**
+     * Utilitza els mètodes del repositori de carrera
+     * i del servei carrera per a fer persistent una carrera
+     */
+
+    @Test
+    public void test_save_carrera() {
+        Long idCarrera = carreraService.crearCarrera("1234567890123456", "Parc de Ses Estacions", "Festival Park", 15, 18);
+        // seria necessari afegir el conductor però anem a testear primer repo
+        Assert.assertEquals("1234567890123456", carreraService.recuperaCarrera(idCarrera).getTarjetaCredito());
+    }
 //
 //    /**
 //     * Crea una classe ConductorRepo que sigui un repositori Spring Data
