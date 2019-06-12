@@ -244,24 +244,24 @@ public class CotxoxApplicationTests {
      * i comprova que s'ha actualitzat el registre
      */
 //
-//    @Test
-//    public void test_asignar_conductor() {
-//        Long idCarrera = carreraService.crearCarrera("1234567890123456", "Parc de Ses Estacions", "Festival Park", 15, 18);
-//        // seria necesario añadir el conductor pero vamos a testear primero repo
-//        Assert.assertEquals("1234567890123456", carreraService.recuperaCarrera(idCarrera).getTarjetaCredito());
-//
-//        Carrera carrera = carreraService.recuperaCarrera(idCarrera);
-//        Assert.assertNotNull(carrera);
-//
-//        Conductor conductora = conductorService.recuperarConductorLibre();
-//        Assert.assertNotNull(conductora);
-//
-//        carrera.setConductor(conductora);
-//        Assert.assertEquals("Samantha", carrera.getConductor().getNombre());
-//
-//        carreraService.updateCarrera(carrera);
-//        Assert.assertEquals("Samantha", carreraService.recuperaCarrera(idCarrera).getConductor().getNombre());
-//    }
+    @Test
+    public void test_asignar_conductor() {
+        Long idCarrera = carreraService.crearCarrera("1234567890123456", "Parc de Ses Estacions", "Festival Park", 15, 18);
+        // seria necesario añadir el conductor pero vamos a testear primero repo
+        Assert.assertEquals("1234567890123456", carreraService.recuperaCarrera(idCarrera).getTarjetaCredito());
+
+        Carrera carrera = carreraService.recuperaCarrera(idCarrera);
+        Assert.assertNotNull(carrera);
+
+        Conductor conductora = conductorService.recuperarConductorLibre();
+        Assert.assertNotNull(conductora);
+
+        carrera.setConductor(conductora);
+        Assert.assertEquals("Samantha", carrera.getConductor().getNombre());
+
+        carreraService.updateCarrera(carrera);
+        Assert.assertEquals("Samantha", carreraService.recuperaCarrera(idCarrera).getConductor().getNombre());
+    }
 //
 //	/**
 //	 * A completar:
