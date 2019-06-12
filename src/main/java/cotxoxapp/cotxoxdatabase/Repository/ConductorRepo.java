@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import cotxoxapp.cotxoxdatabase.Model.Conductor;
 
-public interface ConductorRepository extends CrudRepository<Conductor, String> {
+public interface ConductorRepo extends CrudRepository<Conductor, String> {
 	@Query("select c from Conductor c where c.ocupado = ?1 ")
 	List<Conductor> findByOcupado(boolean i);
 	@Query("select c from Conductor c where c.ocupado = false")

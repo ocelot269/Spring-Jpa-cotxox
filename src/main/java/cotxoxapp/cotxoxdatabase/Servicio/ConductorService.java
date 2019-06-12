@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cotxoxapp.cotxoxdatabase.Model.Conductor;
-import cotxoxapp.cotxoxdatabase.Repository.ConductorRepository;
+import cotxoxapp.cotxoxdatabase.Repository.ConductorRepo;
 
 @Service
 public class ConductorService {
 	
 	@Autowired
-	ConductorRepository conductor1;
+	ConductorRepo conductor1;
 	
 	public Conductor recuperarConductor(String string) {		
 		return conductor1.findOne(string);
