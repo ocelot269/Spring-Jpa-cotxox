@@ -17,6 +17,8 @@ import org.springframework.data.repository.Repository;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -199,12 +201,12 @@ public class CotxoxApplicationTests {
         Assert.assertEquals("Cici", conductorService.recuperarConductor("3333333333333333").getNombre());
         Assert.assertEquals(false,conductorService.recuperarConductor("3333333333333333").isOcupado());
     }
-//
-//    /**
-//     * Implementa un métode en el repositori de l'entitat Conductor
-//     * que retorni una llista de conductores lliures
-//     */
-//
+
+    /**
+     * Implementa un métode en el repositori de l'entitat Conductor
+     * que retorni una llista de conductores lliures
+     */
+
 //    @Test
 //    public void test_recuperar_conductor_libre_repositori() {
 //
@@ -221,26 +223,26 @@ public class CotxoxApplicationTests {
 //        Assert.assertEquals(3, conductoresLibres.size());
 //        Assert.assertEquals(false, conductoresLibres.get(1).isOcupado());
 //    }
-//
-//    /**
-//     * Implementa un mètode en el servei de l'entitat Conductor
-//     * que retorni una llista de conductores lliures
-//     */
-//
-//    @Test
-//    public void tets_conductor_libre_service() {
-//
-//        conductorService.init();
-//
-//        Conductor conductora = conductorService.recuperarConductorLibre();
-//        Assert.assertNotNull(conductora);
-//        Assert.assertEquals(false, conductora.isOcupado());
-//    }
-//
-//    /**
-//     * Assigna una conductora a una carrera que ja existeix a la BBDD
-//     * i comprova que s'ha actualitzat el registre
-//     */
+
+    /**
+     * Implementa un mètode en el servei de l'entitat Conductor
+     * que retorni una llista de conductores lliures
+     */
+
+    @Test
+    public void tets_conductor_libre_service() {
+
+        conductorService.init();
+
+        Conductor conductora = conductorService.recuperarConductorLibre();
+        Assert.assertNotNull(conductora);
+        Assert.assertEquals(false, conductora.isOcupado());
+    }
+
+    /**
+     * Assigna una conductora a una carrera que ja existeix a la BBDD
+     * i comprova que s'ha actualitzat el registre
+     */
 //
 //    @Test
 //    public void test_asignar_conductor() {
