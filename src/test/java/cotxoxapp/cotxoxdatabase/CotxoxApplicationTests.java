@@ -180,25 +180,25 @@ public class CotxoxApplicationTests {
         conductora.setOcupado(true);
         Assert.assertEquals(true, conductora.isOcupado());
     }
-//
-//    /**
-//     * Modifica el servei de l'entitat conductor amb un mètode init() per a inserir
-//     * a la base de dades les conductores següents, totes dues desocupades:
-//     * String[] nombres = {"Sabrina", "Cici"};
-//     * String[] matricula = {"5DHJ444", "7JKK555"};
-//     * String[] modelos = {"Toyota Prius", "Mercedes A"}
-//     */
-//
-//    @Test
-//    public void test_post_construct_servei_conductor() {
-//
-//        conductorService.init();
-//
-//        Assert.assertEquals("Sabrina", conductorService.recuperarConductor("2222222222222222").getNombre());
-//        Assert.assertEquals(false,conductorService.recuperarConductor("2222222222222222").isOcupado());
-//        Assert.assertEquals("Cici", conductorService.recuperarConductor("3333333333333333").getNombre());
-//        Assert.assertEquals(false,conductorService.recuperarConductor("3333333333333333").isOcupado());
-//    }
+
+    /**
+     * Modifica el servei de l'entitat conductor amb un mètode init() per a inserir
+     * a la base de dades les conductores següents, totes dues desocupades:
+     * String[] nombres = {"Sabrina", "Cici"};
+     * String[] matricula = {"5DHJ444", "7JKK555"};
+     * String[] modelos = {"Toyota Prius", "Mercedes A"}
+     */
+
+    @Test
+    public void test_post_construct_servei_conductor() {
+
+        conductorService.init();
+
+        Assert.assertEquals("Sabrina", conductorService.recuperarConductor("2222222222222222").getNombre());
+        Assert.assertEquals(false,conductorService.recuperarConductor("2222222222222222").isOcupado());
+        Assert.assertEquals("Cici", conductorService.recuperarConductor("3333333333333333").getNombre());
+        Assert.assertEquals(false,conductorService.recuperarConductor("3333333333333333").isOcupado());
+    }
 //
 //    /**
 //     * Implementa un métode en el repositori de l'entitat Conductor
