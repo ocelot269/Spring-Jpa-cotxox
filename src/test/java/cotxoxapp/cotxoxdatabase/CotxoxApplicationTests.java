@@ -75,17 +75,17 @@ public class CotxoxApplicationTests {
         Assert.assertEquals("Chevy Malibu", conductor.getModelo());
     }
 
-//    /**
-//     * Mapea la classe carrera per a reflecteixi l'esquema de la base de dades
-//     */
-//
-//    @Test
-//    public void test_mapping_carrera() {
-//        Carrera carrera = em.find(Carrera.class, 1L);
-//        Assert.assertNotNull(carrera);
-//        Assert.assertEquals("4916119711304546", carrera.getTarjetaCredito());
-//        Assert.assertEquals("Samantha", carrera.getConductor().getNombre());
-//    }
+    /**
+     * Mapea la classe carrera per a reflecteixi l'esquema de la base de dades
+     */
+
+    @Test
+    public void test_mapping_carrera() {
+        Carrera carrera = em.find(Carrera.class, 1L);
+        Assert.assertNotNull(carrera);
+        Assert.assertEquals("4916119711304546", carrera.getTarjetaCredito());
+        Assert.assertEquals("Samantha", carrera.getConductor().getNombre());
+    }
 ////
 //    /**
 //     * Crea una classe CarreraRepo que sigui un repositori Spring Data
